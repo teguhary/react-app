@@ -1,4 +1,6 @@
 import React from "react";
+import Card from "./components/Card";
+
 
 function App() {
   return(
@@ -7,14 +9,13 @@ function App() {
       <hr></hr>
       <div className="row">
         <div className="col-md-4">
-          <div className="card">
-          <img className="card-img-top" src="http://placekitten.com/300/200" placeholder="kitten image"></img>
-            <div className="card-body">
-              <h4>First Post</h4>
-              <small className="text-muted">Author, Published 7 Okt 2021</small>
-            </div>
-          </div>
-        </div>
+          <Card
+            imageUrl="http://placekitten.com/g/300/200"
+            title="First Post"
+            author="Teguh"
+            published="15 Okt 2021"
+          />
+        </div> 
       </div>
     </div>
   )
