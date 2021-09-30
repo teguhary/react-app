@@ -1,52 +1,23 @@
-import React, {  useState } from "react";
+import React from "react";
 
 function App() {
-  const [firstname, setFirstname] = useState('')
-  const [lastname, setLastname] = useState('')
-  const [name, setName] = useState('')
-  
-  const submitHandler = (e) => {
-    e.preventDefault()
-    setName(`${firstname} ${lastname}`)
-    setFirstname('')
-    setLastname('')
-  } 
-  
-  return (
-    <div className="p-5">
-      <div className="container">
-        <div className="row">
-          <div className="col-md-4">
-            <div class="card">
-              <div class="card-header">
-                Form
-              </div>
-              <div class="card-body">
-                <form onSubmit={submitHandler}>
-                  <div className="mb-4">
-                    <label htmlFor="firstName" className="form-label">Firstname</label>
-                    <input type="text" value={firstname} onChange={(e) => setFirstname(e.target.value)} name="firstname" id="firstname" className="form-control"></input>
-                  </div>
-                  <div className="mb-4">
-                    <label htmlFor="lastname" className="form-label">Lastname</label>
-                    <input type="text" value={lastname} onChange={(e) => setLastname(e.target.value)}  name="lastname" id="lastname" className="form-control"></input>
-                  </div>
-                  <div>
-                    <div className="d-grid gap-2">
-                      <button type="submit" className="btn btn-primary ">Submit</button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-              <div class="card-footer">
-                Name : { name ? name : ' ' }
-              </div>
+  return(
+    <div className="container py-4">
+      <h3>All Posts</h3>
+      <hr></hr>
+      <div className="row">
+        <div className="col-md-4">
+          <div className="card">
+          <img className="card-img-top" src="http://placekitten.com/300/200" placeholder="kitten image"></img>
+            <div className="card-body">
+              <h4>First Post</h4>
+              <small className="text-muted">Author, Published 7 Okt 2021</small>
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export default App;
