@@ -3,10 +3,10 @@ import React from 'react';
 function Card(props) {
     return(
         <div className="card">
-            <img className="card-img-top" src="http://placekitten.com/300/200" placeholder="kitten image"></img>
+            <img className="card-img-top" src={props.content.imageUrl} alt="kitten"></img>
             <div className="card-body">
-                <h4>First Post</h4>
-                <small className="text-muted">Author, Published 7 Okt 2021</small>
+                <h4>{props.content.title}</h4>
+                <small className="text-muted">{props.content.author}, Published {props.content.published}</small>
              </div>
         </div>
     )
