@@ -1,14 +1,14 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-function Navbar(props) {
+function Navbar({children}) {
     return (
         <div>
             <nav className="navbar navbar-expand-xl navbar-light bg-light">
                 <div className="container-fluid m-2">
                     <NavLink className="navbar-brand mr-auto" to="/">
                         <a href="/" className="logo">
-                            <img className="logo" src="http://placekitten.com/50/50"></img>
+                            <img className="logo" src="http://placekitten.com/50/50" alt="logo"></img>
                         </a>
                     </NavLink>
                     <div className="collapse navbar-collapse w-100" id="navbarNavAltMarkup">
@@ -27,6 +27,9 @@ function Navbar(props) {
                     </div>
                 </div>
             </nav>
+            <div className="py-4">
+                {children}
+            </div>
         </div>
     );
 }
